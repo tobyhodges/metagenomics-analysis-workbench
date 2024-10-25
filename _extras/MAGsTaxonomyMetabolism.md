@@ -133,7 +133,7 @@ Hace la traducción de CDS a aminoácidos y asigna funciones usando varias bases
 <br>
 <p style="text-align: center;">
   <a href="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png">
-    <img src="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png" alt="Prokka"/>
+    <img src="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png" alt="Prokka"/ width="673">
   </a>
 </p>
 <br>
@@ -154,7 +154,10 @@ mkdir -p results/11.prokka
 Para correrlo, podemos hacer un ciclo que nos permita anotar todos los *bins.*
 
 ``` bash
-nohup for FASTA in $(ls results/10.gtdbtk/bins/); do LOCUSTAG=$(basename $FASTA .fasta); prokka --locustag "${LOCUSTAG}_Scaffold"  --prefix $LOCUSTAG --addgenes --addmrn --cpus 4 --outdir "results/11.prokka/$LOCUSTAG" "results/10.gtdbtk/bins/$FASTA" ; done &
+nohup for FASTA in $(ls results/10.gtdbtk/bins/); do
+    LOCUSTAG=$(basename $FASTA .fasta)
+    prokka --locustag "${LOCUSTAG}_Scaffold"  --prefix $LOCUSTAG --addgenes --addmrn --cpus 4 --outdir "results/11.prokka/$LOCUSTAG" "results/10.gtdbtk/bins/$FASTA"
+done &
 ```
 
 > ## Explora
@@ -189,8 +192,11 @@ mkdir -p results/12.kofam
 > ## Ejemplo de como correr KOfamScan
 >
 > KofamScan requiere mucho tiempo de ejecución.
-> Para efectos del taller nosotros ya lo corrimos y te proporcionaremos los resultados.
+> 
+> Para efectos del taller nosotros **ya lo corrimos** y te proporcionaremos los resultados.
+> 
 > Pero te dejamos el bloque de código que usamos para este paso:
+> 
 > ``` bash
 > for FAA in $(ls results/11.prokka/*/*.faa); do
 >     name=$(basename $FAA .faa)
@@ -209,8 +215,9 @@ mkdir -p results/12.kofam
 
 <br>
 Estos resultados ya los tienes en el directorio `results/12.kofam`
-<br>
 
+<br>
+<br>
 Y ahora que ya tenemos los identificadores de KO para cada proteína, vamos a filtrar y graficar el metabolismo de los *bins*.
 
 ### RbiMs
