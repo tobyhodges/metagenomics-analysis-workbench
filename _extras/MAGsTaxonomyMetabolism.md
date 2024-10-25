@@ -133,7 +133,7 @@ Hace la traducción de CDS a aminoácidos y asigna funciones usando varias bases
 <br>
 <p style="text-align: center;">
   <a href="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png">
-    <img src="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png" alt="Prokka"/ width="673">
+    <img src="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png" alt="Prokka" width="673"/>
   </a>
 </p>
 <br>
