@@ -469,7 +469,7 @@ Y ahora si, vamos a correr dRep ...
 ``` bash
 
 export PATH=/miniconda3/envs/metagenomics/bin:$PATH
-dRep dereplicate results/09.drep/ -d -comp 50 -con 10 --SkipSecondary -g results/09.drep/bins/*.fasta
+nohup dRep dereplicate results/09.drep/ -d -comp 50 -con 10 --SkipSecondary -g results/09.drep/bins/*.fasta > outs/09.drep.nohup &
 ```
 <br>
 > ### Nota
