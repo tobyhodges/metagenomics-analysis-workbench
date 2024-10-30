@@ -33,6 +33,9 @@ Para obtener MAGs podemos seguir el siguiente flujo de análisis:
   <img src="{{ page.root }}/fig/extrasMAGs/01.MAGs_workflow.png" alt="Flujo de trabajo para Metagenómica Centrada en Genomas" />
 </a>
 
+<a href="{{ page.root }}/fig/extrasMAGs/01b.TNfCov.png">
+  <img src="{{ page.root }}/fig/extrasMAGs/01b.TNfCov.png" alt="Frecuencia de Tetranucleótidos y Profundidad" width="373" />
+</a>
 <br>
 
 Ya que discutimos como seguir un flujo de análisis para reconstruir genomas entremos en acción, para ello analizaremos el metagenoma del pozol.
