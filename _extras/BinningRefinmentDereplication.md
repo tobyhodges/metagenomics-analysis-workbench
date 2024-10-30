@@ -187,7 +187,7 @@ mkdir -p results/06.vamb
 Ejecutemos vamb:
 
 ``` bash
-vamb --fasta results/02.ensambles/48hrs.fasta --jgi results/03.profundidad/48hrs.mgh_depth.txt --minfasta 500000 --outdir results/06.vamb/48hrs
+nohup vamb --fasta results/02.ensambles/48hrs.fasta --jgi results/03.profundidad/48hrs.mgh_depth.txt --minfasta 500000 --outdir results/06.vamb/48hrs > outs/06.vamb.nohup &
 ```
 
 > ## Responde
