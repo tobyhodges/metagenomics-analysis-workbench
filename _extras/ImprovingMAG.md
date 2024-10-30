@@ -104,10 +104,10 @@ Los datos están públicos bajo el Bioproject: [PRJNA648868](https://www.ebi.ac.
 cd
 
 # descarga
-wget https://zenodo.org/records/13911654/files/taller_metagenomica_pozol.tar.gz?download=1 -O taller_metagenomica_pozol.tar.gz
+#wget https://zenodo.org/records/13911654/files/taller_metagenomica_pozol.tar.gz?download=1 -O taller_metagenomica_pozol.tar.gz
 
 # descomprime
-tar -xvzf taller_metagenomica_pozol.tar.gz
+#tar -xvzf taller_metagenomica_pozol.tar.gz
 
 # Entra al directorio del proyecto
 cd taller_metagenomica_pozol
