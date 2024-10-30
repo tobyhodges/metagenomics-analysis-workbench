@@ -66,7 +66,7 @@ De acuerdo con el flujo de análisis (Figura 1), debemos partir de un ensamble, 
 > * Revisen nuevamente el contenido de los directorios `02.ensambles` y `03.profundidad.txt`
 > * En una diapositiva expliquen el `flujo teórico` que se siguió para obtener los archivos que están en esos directorios.
 > 
-> Usa [esta](https://drive.google.com/drive/folders/1rg-zjuASg9D-goa2SlL3HXalqj3BQFNX?usp=sharing) liga de drive para ir trabajando durante el taller.
+> Usa [esta](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) liga de drive para ir trabajando durante el taller.
 > 
 > Sólo un miembro de cada equipo escriba en la presentación
 {: .challenge}
@@ -515,20 +515,5 @@ conda deactivate
 
 <br>
 
-🧬🦠🥳 Ahora te toca a tí
 
-
-> ## Ejercicio 2
-> 
-> Ahora te toca a tí.
-> 
-> * Reúnanse en equipos y repliquen todo el flujo hasta este punto con la muestra que les toca.
-> * Discutan cada resultado obtenido.
-> * En la [carpeta compartida de Drive](https://drive.google.com/drive/folders/1rg-zjuASg9D-goa2SlL3HXalqj3BQFNX) busquen la diapositiva para el Ejercicio 2.
-> * En la diapositiva correspondiente resuman sus resultados obtenidos.
-> 
-> Tiempo de actividad (2 hr)
-> 
-> Tiempo de presentación de resultados (5 min por equipo)
-{: .challenge}
 
