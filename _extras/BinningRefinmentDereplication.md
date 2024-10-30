@@ -97,7 +97,7 @@ conda activate binning
 Ahora que ya tenemos el ambiente activado ejecutemos metabat:
 
 ``` bash
-metabat2 -i results/02.ensambles/48hrs.fasta -a results/03.profundidad/48hrs.mgh_depth.txt -o results/04.metabat/metabat -t 4 -m 1500 -seed 123
+metabat2 -i results/02.ensambles/48hrs.fasta -a results/03.profundidad/48hrs.mgh_depth.txt -o results/04.metabat/metabat -t 4 -m 1500
 ```
 <br>
 Se sabe que el valor mínimo de contig para reducir errores es 2000, lo puedes ver en la [figura 6 de este artículo](https://static-content.springer.com/esm/art%3A10.1038%2Fnmeth.3103/MediaObjects/41592_2014_BFnmeth3103_MOESM187_ESM.pdf).
