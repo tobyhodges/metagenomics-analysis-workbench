@@ -111,7 +111,7 @@ GTDBtk_barplot
 > 
 > * Reúnanse en equipos y obtengan la clasificación taxonómica de los MAGs que obtuvieron con la muestra que les tocó.
 > * Discutan cada resultado obtenido.
-> * En la [carpeta compartida de Drive](https://drive.google.com/drive/folders/1rg-zjuASg9D-goa2SlL3HXalqj3BQFNX) busquen la diapositiva para el Ejercicio 3.
+> * En la [carpeta compartida de Drive](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) busquen la diapositiva para el Ejercicio 3.
 > * En la diapositiva correspondiente resuman sus resultados obtenidos.
 > 
 > Tiempo de actividad (30 min)
