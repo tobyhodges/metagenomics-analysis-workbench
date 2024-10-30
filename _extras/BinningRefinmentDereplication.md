@@ -20,8 +20,16 @@ En los [días anteriores](https://carpentries-lab.github.io/metagenomics-analysi
 De acuerdo con el flujo de análisis (Figura 1), debemos partir de un ensamble, mapear las lecturas y obtener un archivo de profundidad de cada contig en el ensamble.
 <br>
 
-> ## Archivos de profundidad
-> El proceso de mapeo es demandante en tiempo de ejecución y recursos. Así que nos dimos a la tarea de generar el archivo de profundidad para comenzar directamente con el *binning*.
+> ## Archivos necesarios para hacer _binning_
+> 
+> El proceso de ensamble y mapeo son demandantes en tiempo de ejecución y recursos. Así que nos dimos a la tarea de generar el ensamble
+> y el archivo de profundidad para comenzar directamente con el *binning*. El ensamble lo corrimos con Megahit, te dejamos la línea que usamos:
+> ```bash
+> # Megahit
+> megahit -1 data/full/48hrs_sm_R1.fastq -2 data/full/48hrs_sm_R2.fastq --min-contig-len 500 -t 40 --presets meta-sensitive --out-prefix 48hrs -o results/02.assembliesfull/megahit/48hrs
+> # Con Metaspades podría ser asi:
+> spades.py --meta  -1 data/48hrs_sm_R1_5M.fastq -2 data/48hrs_sm_R2_5M.fastq -o results/02.assemblies/metaspades/48hrs 
+> ```
 >
 > El mapeo lo corrimos con [bowtie2](https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#introduction) que es una herramienta confiable
 > y muy utilizada para alinear lecturas cortas a una referencia, en nuestro caso, la referencia es el ensamble metagenómico de la muestra de 48hrs.
