@@ -515,5 +515,20 @@ conda deactivate
 
 <br>
 
+🧬🦠🥳 Ahora te toca a tí
 
+
+> ## Ejercicio 2
+> 
+> Ahora te toca a tí.
+> 
+> * Reúnanse en equipos y repliquen todo el flujo hasta este punto con la muestra que les toca.
+> * Discutan cada resultado obtenido.
+> * En la [carpeta compartida de Drive](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) busquen la diapositiva para el Ejercicio 2.
+> * En la diapositiva correspondiente resuman sus resultados obtenidos.
+> 
+> Tiempo de actividad (2 hr)
+> 
+> Tiempo de presentación de resultados (5 min por equipo)
+{: .challenge}
 
