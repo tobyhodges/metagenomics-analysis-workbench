@@ -340,11 +340,9 @@ plot_heatmap(tibble_ko = Secretion_system_pozol,
              calc = "Binary")
 
 # Explorar
-colnames(pozol_mapp) 
+colnames(pozol_mapp)
+unique(pozol_mapp$Cycle)
 
-pozol_mapp %>%
-  select(Cycle, Pathway_cycle, Pathway_description) %>%
-  distinct()
 ```
 
 <br>
@@ -355,7 +353,23 @@ pozol_mapp %>%
 </p>
 <br>
 
+> ## Ejercicio 4
+> 
+> 
+> * Reúnanse en equipos y exploren la tabla de mapeo de RbiMs
+> * Seleccionen alguna via y obtenga un plot con lo que quieran incluir.
+> * En la [carpeta compartida de Drive](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) busquen la diapositiva para el Ejercicio 4.
+> * En la diapositiva correspondiente resuman sus resultados obtenidos.
+> 
+> Tiempo de actividad (15 min)
+> 
+> Tiempo de presentación de resultados (2 min por equipo)
+{: .challenge}
+
+<br>
 
 ### Antismash
 
 Adicionalmente podrías anotar el metabolismo secundario de los *bins* siguiendo el flujo de análisis propuestos en la lección de [Minería Genómica](https://carpentries-incubator.github.io/genome-mining/02-antismash/index.html) de Software Carpentry.
+
+<br>
