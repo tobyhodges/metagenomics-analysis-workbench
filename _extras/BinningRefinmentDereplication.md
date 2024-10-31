@@ -307,6 +307,7 @@ Y regresemos a nuestro directorio principal
 cd && cd taller_metagenomica_pozol/
 ```
 <br>
+
 Exploremos los resultados!
 
 ``` bash
@@ -323,6 +324,13 @@ Refined_bin     Size(Kbp)       Source
 48hrs_6 1052.67 48hrs_maxbin.003.fasta,metabat.4.fa,15732.fna
 48hrs_7 557.49  48hrs_maxbin.006.fasta,metabat.1.fa,28990.fna
 ```
+
+<br>
+
+> ## Responde
+> ¿Cuántos bins analizó Binning_refiner y cuántos quedaron después del refinamiento?
+> ¿Hubo separación de algunos bins para formar otros?
+{: .challenge}
 
 > ## Sankey plot
 > Puedes generar tu propio sankey plot para visualizar los resultados de Binning_refiner.
@@ -415,12 +423,19 @@ Ya que tenemos los archivos tsv podemos empezar con el refinamiento!! 🥳
 DAS_Tool -i results/08.dastool/48hrs_metabat.dastool.tsv,results/08.dastool/48hrs_maxbin.dastool.tsv,results/08.dastool/48hrs_vamb.dastool.tsv -l metabat,maxbin,vamb -c results/02.ensambles/48hrs.fasta -o results/08.dastool/48hrs -t 4 --write_bins
 ```
 
+<br>
+
+> ## Responde
+> ¿Cuántos bins quedaron después del refinamiento con DASTool?
+> ¿Más o menos que con Binning_refiner?
+> ¿Qué calidad tienen?
+{: .challenge}
 
 ## Desreplicación
 
 ### dRep
 
-La desreplicación es el proceso de identificar conjuntos de genomas que son "iguales" en una lista de genomas y eliminar todos los genomas excepto el "mejor" de cada conjunto redundante. [dRep](https://drep.readthedocs.io/en/latest/overview.html) es una herramienta útil para esto.
+La desreplicación es el proceso de identificar conjuntos de genomas que son "iguales" en una lista de genomas y eliminar todos los genomas excepto el "mejor" de cada conjunto redundante. [dRep](https://drep.readthedocs.io/en/latest/overview.html) es una herramienta útil para esto. Utiliza distancias Mash y ANIm para discriminar entre MAGs iguales.
 
 <br>
 <p style="text-align: center;">
@@ -448,13 +463,17 @@ cd results/09.drep/bins/
 ```
 
 Con las siguientes lineas podemos copiar los bins en este directorio:
-
+<br>
+Primero los de DASTool
 ``` bash
-
 for i in $(ls ../../08.dastool/48hrs_DASTool_bins/*.fa); do
     name=$(basename $i .fa); cp $i $name".fasta"
 done
+```
+<br>
+Y ahora los de Binning_refiner
 
+``` bash
 cp ../../07.binning_refiner/48hrs_Binning_refiner_outputs/48hrs_refined_bins/*.fasta .
 ```
 <br>
@@ -495,6 +514,10 @@ Vamos a desactivar el ambiente de dRep
 conda deactivate
 ```
 
+> ## Responde
+> ¿Cuántos clústers se formaron?
+> ¿Cuántos MAGs son únicos?
+{: .challenge}
 ------------------------------------------------------------------------
 
 > ## 🧠 Discusión
