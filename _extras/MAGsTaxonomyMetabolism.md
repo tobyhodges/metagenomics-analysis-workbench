@@ -41,12 +41,13 @@ Para colocar los *bins* refinados y renombrados ejecuta el script `src/copiar_re
 ``` bash
  bash src/copiar_renombrarbins.sh
 ```
+
 <br>
 Ahora si, vamos a correr gtdbtk ...
 
 ``` bash
-pip install numpy==1.19.5
-gtdbtk classify_wf --genome_dir results/10.gtdbtk/bins/ --out_dir results/10.gtdbtk/ --cpus 4 -x fasta
+#pip install numpy==1.19.5
+nohup gtdbtk classify_wf --genome_dir results/10.gtdbtk/bins/ --out_dir results/10.gtdbtk/ --cpus 6 -x fasta > outs/10.gtdbtk.nohup &
 ```
 
 No olvides desactivar el ambiente
@@ -151,21 +152,40 @@ Tenemos el ambiente activo, ahora vamos a crear un directorio de resultados para
 mkdir -p results/11.prokka
 ```
 <br>
-Para correrlo, podemos hacer un ciclo que nos permita anotar todos los *bins.*
+Para correrlo, podemos hacer un ciclo que nos permita anotar todos los *bins.* E
+Escribe este ciclo en un script de bash que se llame `11.prokka.sh` dentro del directorio de scripts `src/`.
 
 ``` bash
-nohup for FASTA in $(ls results/10.gtdbtk/bins/); do
+#!/usr/bin/bash
+# Ciclo for que ejecuta prokka en cada MAG refinado y desreplicado
+
+for FASTA in $(ls results/10.gtdbtk/bins/); do
     LOCUSTAG=$(basename $FASTA .fasta)
-    prokka --locustag "${LOCUSTAG}_Scaffold"  --prefix $LOCUSTAG --addgenes --addmrn --cpus 4 --outdir "results/11.prokka/$LOCUSTAG" "results/10.gtdbtk/bins/$FASTA"
-done &
+    prokka --locustag "${LOCUSTAG}_Scaffold"  --prefix $LOCUSTAG --addgenes \
+    --addmrna --cpus 4 --outdir "results/11.prokka/$LOCUSTAG" "results/10.gtdbtk/bins/$FASTA"
+done
+```
+<br>
+Y ahora córrelo asi:
+
+``` bash
+nohup bash src/11.prokka.sh > outs/11.prokka.nohup &
 ```
 
 > ## Explora
 > 
 > Mientras prokka se ejecuta en los bins que obtuviste, despliega la ayuda y discute:
-> ¿ qué argumentos quitarías o agregarías?
+> ¿qué argumentos quitarías o agregarías?
 >
 > Cuáles te llamaron la atención?
+{: .challenge}
+
+
+> ## Responde:
+> ¿Cuántos genes y cuántos CDS tiene el bin 48hBin01?
+> Tip: usa `grep -c '>'`
+>
+> ¿En el contexto del pozol, cómo detectarías bins que estén degradando el maíz?
 {: .challenge}
 
 
@@ -182,11 +202,12 @@ Ahora que tenemos las proteínas predichas vamos a obtener más anotaciones úti
 
 [KofamScan](https://github.com/takaram/kofam_scan) es una herramienta de anotación, usa la base de datos KOfam de KEGG para obtener información sobre los genes que participan en diferentes rutas metabólicas.
 
-Vamos a crear el directorio de resultados
+#### Otras herramientas de anotación funcional
 
-``` bash
-mkdir -p results/12.kofam
-```
+También puedes explorar:
+* [CAZy](http://www.cazy.org/) y su [CAZYpedia](https://www.cazypedia.org/index.php/Glycoside_Hydrolase_Families).
+* [DRAM](https://github.com/WrightonLabCSU/DRAM/wiki)
+* [EggNOG-Mapper](http://eggnog-mapper.embl.de/) 
 
 
 > ## Ejemplo de como correr KOfamScan
@@ -198,6 +219,8 @@ mkdir -p results/12.kofam
 > Pero te dejamos el bloque de código que usamos para este paso:
 > 
 > ``` bash
+> mkdir -p results/12.kofam
+> 
 > for FAA in $(ls results/11.prokka/*/*.faa); do
 >     name=$(basename $FAA .faa)
 >     exec_annotation $FAA \
