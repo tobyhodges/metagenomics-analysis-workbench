@@ -234,14 +234,16 @@ Use `contigs.fasta`  and `scaffolds.fasta ` files and sort the commands to creat
 Do they have the same number of lines? Why?  
 **Hint**: You can use the following commands: `grep`, `|` (pipe), `-l`, `">"`, `wc`, `filename.fasta`
 
-> ## Solution
-> 
-> ```bash
-> $ grep '>' contigs.fasta | wc -l
-> $ grep '>' scaffolds.fasta | wc -l
-> ```
-> 
-> A contig is created from reads and then a scaffold from a group of contigs, so we expect fewer lines in the `scaffolds.fasta ` .
+::::::::::::::::::: solution
+
+```bash
+$ grep '>' contigs.fasta | wc -l
+$ grep '>' scaffolds.fasta | wc -l
+```
+
+A contig is created from reads and then a scaffold from a group of contigs, so we expect fewer lines in the `scaffolds.fasta`.
+
+::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -179,19 +179,13 @@ C	MISEQ-LAB244-W7:156:000000000-A80CV:1:1101:19558:2111	119045	251|133	0:18 1224
 
 This information may need to be clarified. Let us take out our cheatsheet to understand some of its components:
 
-|------------------------------+------------------------------------------------------------------------------|  
 | Column example                      |                              Description                                     |  
-|------------------------------+------------------------------------------------------------------------------|  
+|------------------------------|------------------------------------------------------------------------------|  
 |   C                          |  Classified or unclassified                                                  |  
-|------------------------------+------------------------------------------------------------------------------|  
 |   MISEQ-LAB244-W7:156:000000000-A80CV:1:1101:15697:2078               |FASTA header of the sequence         |  
-|------------------------------+------------------------------------------------------------------------------|  
 |  2219696                     | Tax ID                                                                       |  
-|------------------------------+------------------------------------------------------------------------------|  
-|    250:120                   |Read length                                                                   |  
-|------------------------------+------------------------------------------------------------------------------|  
-|  0:28 350054:5 1224:2 0:1 2:5 0:77 2219696:5 0:93 379:4 0:82|kmers hit to a taxonomic ID *e.g.,* tax ID 350054 has five hits, tax ID 1224 has two hits, etc. |  
-|-------------------+-----------------------------------------------------------------------------------------|
+|    250:120                   | Read length                                                                   |  
+|  0:28 350054:5 1224:2 0:1 2:5 0:77 2219696:5 0:93 379:4 0:82 | kmers hit to a taxonomic ID *e.g.,* tax ID 350054 has five hits, tax ID 1224 has two hits, etc. |  
 
 The Kraken file could be more readable. So let us look at the report file:
 
@@ -212,21 +206,14 @@ head ~/dc_workshop/taxonomy/JP4D.report
   0.76	5733	4446	S	1063	                Rhodobacter sphaeroides
 ```
 
-|------------------------------+------------------------------------------------------------------------------|  
 | Column example  |                              Description                                     |  
-|------------------------------+------------------------------------------------------------------------------|  
+|------------------------------|------------------------------------------------------------------------------|  
 | 78.13 |  Percentage of reads covered by the clade rooted at this taxon                                                  |  
-|------------------------------+------------------------------------------------------------------------------|  
-| 587119 |   Number of reads covered by the clade rooted at this taxon
-|------------------------------+------------------------------------------------------------------------------|  
-| 587119  |   Number of reads assigned directly to this taxon                                                                    |  
-|------------------------------+------------------------------------------------------------------------------|  
-| U | A rank code, indicating (U)nclassified, (D)omain, (K)ingdom, (P)hylum, (C)lass, (O)rder, (F)amily, (G)enus, or (S)pecies. All other ranks are simply '-'.                                                                  |  
-|------------------------------+------------------------------------------------------------------------------|  
-| 0 |NCBI taxonomy ID |  
-|-------------------+-----------------------------------------------------------------------------------------|
+| 587119 |   Number of reads covered by the clade rooted at this taxon |
+| 587119  |   Number of reads assigned directly to this taxon |  
+| U | A rank code, indicating (U)nclassified, (D)omain, (K)ingdom, (P)hylum, (C)lass, (O)rder, (F)amily, (G)enus, or (S)pecies. All other ranks are simply '-'. |  
+| 0 | NCBI taxonomy ID |  
 | unclassified | Indented scientific name |  
-|-------------------+-----------------------------------------------------------------------------------------|
 
 ### Taxonomic assignment of the contigs of a MAG
 
@@ -414,7 +401,7 @@ We can look at a comparison of both our samples in the Comparison tab.
   <img src="fig/03-06-08.png" alt="A table of the same format as the Kraken report but for both samples at once." />
 </a>
 
-::::::::::::::::::::::::::::::::::::::  discussion
+::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Discussion: Unclassified reads
 

@@ -286,15 +286,12 @@ e) `ls -ahlS`
 :::::::::::::::  solution
 
 ## Solution
-
-```bash
   
 a) No. The flag `-a` shows all the contents, including hidden files and directories, but not the sizes.  
 b) No. The flag `-S` shows the content Sorted by size, starting with the most extensive file, but not the sizes.  
 c) Yes. The flag `-l` shows the contents with metadata, including file size. Other metadata are permissions, owners, and modification dates.    
 d) Yes. The flag `-lh` shows the content with metadata in a human-readable manner.  
 e) Yes. The combination of all the flags shows all the contents with metadata, including hidden files, sorted by size.  
-```
 
 ```bash
 ls -ahls

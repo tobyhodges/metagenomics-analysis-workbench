@@ -100,7 +100,7 @@ the differences that we observe when comparing metagenomes can be
 correlated to the metadata, which is why we must devote a whole section
 of our experimental design to the metadata we expect to collect and record carefully.
 
-::::::::::::::::::::::::::::::::::::::  discussion
+::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Discussion #1: Choosing amplicon or shotgun sequencing?
 

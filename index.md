@@ -3,8 +3,6 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-{% include gh\_variables.html %}
-
 A lot of metagenomics analysis is done using command-line tools for three reasons:
 
 1) You will often be working with a large number of files, and working through the command line rather than through a graphical user interface (GUI) allows you to automate repetitive tasks.
