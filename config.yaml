@@ -10,7 +10,8 @@
 # incubator: The Carpentries Incubator
 # Note that you can also use a custom carpentry type. For more info,
 # see the documentation: https://carpentries.github.io/sandpaper-docs/editing.html
-carpentry: 'cp'
+carpentry: 'lab'
+doi: "https://doi.org/10.21105/jose.00209"
 
 # Custom carpentry description
 # This will be used as the alt text for the logo
@@ -20,7 +21,7 @@ carpentry: 'cp'
 title: 'Data Processing and Visualization for Metagenomics'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 
+created: 2020-08-24 
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'

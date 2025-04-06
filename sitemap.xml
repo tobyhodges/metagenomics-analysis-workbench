@@ -49,6 +49,9 @@
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/MAGsTaxonomyMetabolism.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/amplicon.html</loc>
   </url>
   <url>
@@ -56,6 +59,9 @@
   </url>
   <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/images.html</loc>
   </url>
   <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/index.html</loc>
@@ -109,6 +115,9 @@
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/MAGsTaxonomyMetabolism.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/amplicon.html</loc>
   </url>
   <url>
@@ -118,13 +127,28 @@
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-lab.github.io/metagenomics-analysis/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-lab.github.io/metagenomics-analysis/profiles.html</loc>
