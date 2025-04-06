@@ -34,7 +34,7 @@ characteristics of the contigs, such as their GC content, the use of tetranucleo
 that distinguishes between contigs that belong to different bins according to their
 coverage levels and the tetranucleotide frequencies they have.
 
-::::::::::::::::::::::::::::::::::::::  discussion
+::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Discussion 1: Relation between MAGs and depth
 
@@ -131,9 +131,9 @@ JP4D.003.fasta	51.4%	3289972	48.1
 JP4D.004.fasta	77.6%	5692657	38.9
 ```
 
-::::::::::::::::::::::::::::::::::::::  discussion
+::::::::::::::::::::::::::::::::::::::  challenge
 
-## Discussion: The quality of MAGs
+## Discussion 2: The quality of MAGs
 
 Can we trust the quality of our bins only with the given information?
 What else do we want to know about our MAGs to use for further analysis confidently?

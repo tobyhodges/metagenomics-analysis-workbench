@@ -67,15 +67,11 @@ the concept of diversity.
 
 ## α diversity
 
-|-------------------+-----------------------------------------------------------------------------------------------------------------|  
-| Diversity Indices |                             Description                                                                         |  
-|-------------------+-----------------------------------------------------------------------------------------------------------------|  
-|      Shannon (H)  | Estimation of species richness and species evenness. More weight on richness.                                   |  
-|-------------------+-----------------------------------------------------------------------------------------------------------------|  
-|    Simpson's (D)  |Estimation of species richness and species evenness. More weigth on evenness.                                    |  
-|-------------------+-----------------------------------------------------------------------------------------------------------------|  
-|     Chao1         | Abundance based on species represented by a single individual (singletons) and two individuals (doubletons).    |  
-|-------------------+-----------------------------------------------------------------------------------------------------------------|
+| Diversity Indices | Description |  
+|-------------------|-------------|  
+|      Shannon (H)  | Estimation of species richness and species evenness. More weight on richness. |
+|    Simpson's (D)  |Estimation of species richness and species evenness. More weigth on evenness. |  
+|     Chao1         | Abundance based on species represented by a single individual (singletons) and two individuals (doubletons).    |
 
 - Shannon (H):
 
@@ -471,26 +467,27 @@ Look at the code below and answer:
 
 <a href="fig/03-08-09.png">
 <img src="fig/03-08-09.png" alt="The distance between the three samples, JC1A, JP4D and JP41 is shown in a plane. Each sample has a legend and a color. The color is according to the metadata treatment. There are three possible treatments in the legend: Control mesocosm, Fertilized pond, and Unenriched pond" />
-~~~
+
+```R
 metadata_cuatroc <- data.frame(Sample=c("JC1A", "JP4D", "JP41"), Treatment=c("Control mesocosm", "Fertilized pond", "Unenriched pond")) # Making dataframe with metadata  
 rownames(metadata_cuatroc) <- metadata_cuatroc$Sample # Using sample names as row names  
 percentages@sam_data <- sample_data(metadata_cuatroc) # Adding metadata to sam_data table of phyloseq object percentages  
 meta_ord <- ordinate(physeq = percentages, method = "NMDS", distance = "bray") # Calculating beta diversity    
 plot_ordination(physeq = percentages, ordination = meta_ord, color = "Treatment") + # Plotting beta diversity.  
     geom_text(mapping = aes(label = Sample), size = 3, vjust = 1.5)   
-~~~
-{: .language-r}
-> ## Solution
-> The flag `color = "Treatment"` applied a color to each sample according to its treatment, in the `plot_ordination` of the object `percentages`.   
-> The `geom_text` instruction added the names of the sample to the graph. This could have added any text, with the instruction `label = Sample` we specified to add the names of the samples as text. With `size` we adjusted the size of the text, and with `vjust` we adjusted the position
->so the text would not overlap with the dots.    
-> There are three possible treatments, Control mesocosm, Fertilized, and Unfertilized pond.  
-> We do not observe any kind of clustering in these three samples. More data would show if samples with similar treatments are clustered together.   
-{: .solution}
+```
+
+::::::::::::::::::::: solution
+The flag `color = "Treatment"` applied a color to each sample according to its treatment, in the `plot_ordination` of the object `percentages`.   
+The `geom_text` instruction added the names of the sample to the graph. This could have added any text, with the instruction `label = Sample` we specified to add the names of the samples as text. With `size` we adjusted the size of the text, and with `vjust` we adjusted the position so the text would not overlap with the dots.    
+There are three possible treatments, Control mesocosm, Fertilized, and Unfertilized pond.  
+We do not observe any kind of clustering in these three samples. More data would show if samples with similar treatments are clustered together.   
+
+::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::  discussion
+::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Discussion: Indexes of diversity
 
