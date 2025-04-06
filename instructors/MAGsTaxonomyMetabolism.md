@@ -1,28 +1,29 @@
 ---
-title: "Clasificación taxonómica y Metabolismo"
-teaching: 1 h 
+title: Clasificación taxonómica y Metabolismo
+teaching: 1 h
 exercises: 2 h
 questions:
-- "Cuál es la identidad taxonómica de los MAGs?"
-- "Qué funciones codifican?" 
-objectives:
-- "Obtener la identidad taxonómica de los MAGs y conocer su capacidad funcional"
+- Cuál es la identidad taxonómica de los MAGs?
+- Qué funciones codifican?
+objectives: Obtener la identidad taxonómica de los MAGs y conocer su capacidad funcional
 keypoints:
-- "La clasificación taxonómica por aproximación filogenética es altamente confiable"
-- "Anotar los MAGs con diversas bases de datos mejora nuestro entendimiento de las funciones de los microorganismos"
+- La clasificación taxonómica por aproximación filogenética es altamente confiable
+- Anotar los MAGs con diversas bases de datos mejora nuestro entendimiento de las
+  funciones de los microorganismos
 ---
 
 ## Taxonomía
+
 ### GTDB-tk
 
 GTDB-Tk es una herramienta que asigna taxonomía a genomas utilizando la base de datos [GTDB](https://gtdb.ecogenomic.org/) (Genome Taxonomy Database).
-Basado en árboles filogenéticos y medidas de ANI (Average Nucleotide Identity), GTDB-Tk clasifica genomas bacterianos y arqueanos, 
+Basado en árboles filogenéticos y medidas de ANI (Average Nucleotide Identity), GTDB-Tk clasifica genomas bacterianos y arqueanos,
 proporciona una taxonomía coherente y actualizada. Se utiliza mucho en el análisis de genomas y metagenomas.
 
 <br>
 <p style="text-align: center;">
-  <a href="{{ page.root }}/fig/extrasMAGs/14.GTDB-tk_worflow.png">
-    <img src="{{ page.root }}/fig/extrasMAGs/14.GTDB-tk_worflow.png" alt="Flujo de análisis de GTDB-tk"/>
+  <a href="fig/extrasMAGs/14.GTDB-tk_worflow.png">
+    <img src="fig/extrasMAGs/14.GTDB-tk_worflow.png" alt="Flujo de análisis de GTDB-tk"/>
   </a>
 </p>
 <br>
@@ -38,35 +39,40 @@ conda activate gtdbtk-2.1.1
 El directorio de resultados para gtdbtk ya lo tienes en tu carpeta de resultados. 
 Para colocar los *bins* refinados y renombrados ejecuta el script `src/copiar_renombrarbins.sh`:
 
-``` bash
+```bash
  bash src/copiar_renombrarbins.sh
 ```
 
 <br>
 Ahora si, vamos a correr gtdbtk ...
 
-``` bash
+```bash
 #pip install numpy==1.19.5
 nohup gtdbtk classify_wf --genome_dir results/10.gtdbtk/bins/ --out_dir results/10.gtdbtk/ --cpus 6 -x fasta > outs/10.gtdbtk.nohup &
 ```
 
 No olvides desactivar el ambiente
 
-``` bash
+```bash
 conda deactivate
 ```
 
-> ## Resultado de GTDB-Tk
-> Si gtdbtk está tomando mucho tiempo puedes parar el proceso con `ctrl + C` en tu teclado.
-> El resultado final se encuentra en el directorio y archivo: `results/10.gtdbtk/gtdbtk.bac120.summary.tsv`.
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Resultado de GTDB-Tk
+
+Si gtdbtk está tomando mucho tiempo puedes parar el proceso con `ctrl + C` en tu teclado.
+El resultado final se encuentra en el directorio y archivo: `results/10.gtdbtk/gtdbtk.bac120.summary.tsv`.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 <br>
 Después de ejecutar GTDB-tk, continuaremos en R para visualizar los datos.
 Crea  un proyecto de R dentro del directorio `results/10.gtdbtk/`
 <br>
 
-``` r
+```r
 library(tidyverse)
 library(ggplot2)
 # Leer la tabla ------------------------------------------------------------####
@@ -101,24 +107,34 @@ GTDBtk_barplot <- pozol_gtdbtk %>%
 GTDBtk_barplot
 ```
 
-> ## Discusión
-> Qué otra estrategias implementarías para la clasificación taxonómica?
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Discusión
+
+Qué otra estrategias implementarías para la clasificación taxonómica?
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 <br>
 
-> ## Ejercicio 3
-> 
-> Ahora te toca a tí.
-> 
-> * Reúnanse en equipos y obtengan la clasificación taxonómica de los MAGs que obtuvieron con la muestra que les tocó.
-> * Discutan cada resultado obtenido.
-> * En la [carpeta compartida de Drive](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) busquen la diapositiva para el Ejercicio 3.
-> * En la diapositiva correspondiente resuman sus resultados obtenidos.
-> 
-> Tiempo de actividad (30 min)
-> 
-> Tiempo de presentación de resultados (2 min por equipo)
-{: .challenge}
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Ejercicio 3
+
+Ahora te toca a tí.
+
+- Reúnanse en equipos y obtengan la clasificación taxonómica de los MAGs que obtuvieron con la muestra que les tocó.
+- Discutan cada resultado obtenido.
+- En la [carpeta compartida de Drive](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) busquen la diapositiva para el Ejercicio 3.
+- En la diapositiva correspondiente resuman sus resultados obtenidos.
+
+Tiempo de actividad (30 min)
+
+Tiempo de presentación de resultados (2 min por equipo)
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 <br>
 ----------------------------------------------------------------------------------------------------------------
@@ -127,35 +143,35 @@ GTDBtk_barplot
 
 ### PROKKA
 
-[Prokka](https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/annotation-with-prokka/slides-plain.html) es una herramienta útil, usa diferentes programas para predecir genes, secuencias codificantes, tRNAs, rRNAs. 
+[Prokka](https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/annotation-with-prokka/slides-plain.html) es una herramienta útil, usa diferentes programas para predecir genes, secuencias codificantes, tRNAs, rRNAs.
 Hace la traducción de CDS a aminoácidos y asigna funciones usando varias bases de datos.
-
 
 <br>
 <p style="text-align: center;">
-  <a href="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png">
-    <img src="{{ page.root }}/fig/extrasMAGs/15.Prokka_workflow.png" alt="Prokka" width="673"/>
+  <a href="fig/extrasMAGs/15.Prokka_workflow.png">
+    <img src="fig/extrasMAGs/15.Prokka_workflow.png" alt="Prokka" width="673"/>
   </a>
 </p>
 <br>
 
-
 Para correrlo vamos a activar el ambiente en el que se aloja.
 
-``` bash
+```bash
 conda activate Prokka_Global
 ```
+
 <br>
 Tenemos el ambiente activo, ahora vamos a crear un directorio de resultados para prokka.
 
-``` bash
+```bash
 mkdir -p results/11.prokka
 ```
+
 <br>
 Para correrlo, podemos hacer un ciclo que nos permita anotar todos los *bins.* E
 Escribe este ciclo en un script de bash que se llame `11.prokka.sh` dentro del directorio de scripts `src/`.
 
-``` bash
+```bash
 #!/usr/bin/bash
 # Ciclo for que ejecuta prokka en cada MAG refinado y desreplicado
 
@@ -165,34 +181,42 @@ for FASTA in $(ls results/10.gtdbtk/bins/); do
     --addmrna --cpus 4 --outdir "results/11.prokka/$LOCUSTAG" "results/10.gtdbtk/bins/$FASTA"
 done
 ```
+
 <br>
 Y ahora córrelo asi:
 
-``` bash
+```bash
 nohup bash src/11.prokka.sh > outs/11.prokka.nohup &
 ```
 
-> ## Explora
-> 
-> Mientras prokka se ejecuta en los bins que obtuviste, despliega la ayuda y discute:
-> ¿qué argumentos quitarías o agregarías?
->
-> Cuáles te llamaron la atención?
-{: .challenge}
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Explora
+
+Mientras prokka se ejecuta en los bins que obtuviste, despliega la ayuda y discute:
+¿qué argumentos quitarías o agregarías?
+
+Cuáles te llamaron la atención?
 
 
-> ## Responde:
-> ¿Cuántos genes y cuántos CDS tiene el bin 48hBin01?
-> Tip: usa `grep -c '>'`
->
-> ¿En el contexto del pozol, cómo detectarías bins que estén degradando el maíz?
-{: .challenge}
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Responde:
+
+¿Cuántos genes y cuántos CDS tiene el bin 48hBin01?
+Tip: usa `grep -c '>'`
+
+¿En el contexto del pozol, cómo detectarías bins que estén degradando el maíz?
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 <br>
 Desactivemos el ambiente:
 
-``` bash
+```bash
 conda deactivate
 ```
 
@@ -205,36 +229,39 @@ Ahora que tenemos las proteínas predichas vamos a obtener más anotaciones úti
 #### Otras herramientas de anotación funcional
 
 También puedes explorar:
-* [CAZy](http://www.cazy.org/) y su [CAZYpedia](https://www.cazypedia.org/index.php/Glycoside_Hydrolase_Families).
-* [DRAM](https://github.com/WrightonLabCSU/DRAM/wiki)
-* [EggNOG-Mapper](http://eggnog-mapper.embl.de/) 
 
+- [CAZy](https://www.cazy.org/) y su [CAZYpedia](https://www.cazypedia.org/index.php/Glycoside_Hydrolase_Families).
+- [DRAM](https://github.com/WrightonLabCSU/DRAM/wiki)
+- [EggNOG-Mapper](https://eggnog-mapper.embl.de/)
 
-> ## Ejemplo de como correr KOfamScan
->
-> KofamScan requiere mucho tiempo de ejecución.
-> 
-> Para efectos del taller nosotros **ya lo corrimos** y te proporcionaremos los resultados.
-> 
-> Pero te dejamos el bloque de código que usamos para este paso:
-> 
-> ``` bash
-> mkdir -p results/12.kofam
-> 
-> for FAA in $(ls results/11.prokka/*/*.faa); do
->     name=$(basename $FAA .faa)
->     exec_annotation $FAA \
->         -o results/12.kofam/"$name.txt" \
->         --report-unannotated \
->         --cpu 4 \
->         --tmp-dir results/12.kofam/"tmp$name" \
->         -p /home/alumno1/kofam/db/profiles/ \
->         -k /home/alumno1/kofam/db/ko_list
-> done
-> # remover los directorios temporales
-> #rm -r results/12.kofam/tmp*
-> ```
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Ejemplo de como correr KOfamScan
+
+KofamScan requiere mucho tiempo de ejecución.
+
+Para efectos del taller nosotros **ya lo corrimos** y te proporcionaremos los resultados.
+
+Pero te dejamos el bloque de código que usamos para este paso:
+
+```bash
+mkdir -p results/12.kofam
+
+for FAA in $(ls results/11.prokka/*/*.faa); do
+    name=$(basename $FAA .faa)
+    exec_annotation $FAA \
+        -o results/12.kofam/"$name.txt" \
+        --report-unannotated \
+        --cpu 4 \
+        --tmp-dir results/12.kofam/"tmp$name" \
+        -p /home/alumno1/kofam/db/profiles/ \
+        -k /home/alumno1/kofam/db/ko_list
+done
+# remover los directorios temporales
+#rm -r results/12.kofam/tmp*
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 <br>
 Estos resultados ya los tienes en el directorio `results/12.kofam`
@@ -245,21 +272,20 @@ Y ahora que ya tenemos los identificadores de KO para cada proteína, vamos a fi
 
 ### RbiMs
 
-[RbiMs](https://github.com/mirnavazquez/RbiMs) es un paquete de R muy útil para obtener la anotación de cada KEGG ID y generar plots de esta información. 
+[RbiMs](https://github.com/mirnavazquez/RbiMs) es un paquete de R muy útil para obtener la anotación de cada KEGG ID y generar plots de esta información.
 Puede trabajar con anotaciones de KOFAM, Interpro, PFAM o CAZY.
-
 
 <br>
 <p style="text-align: center;">
-  <a href="{{ page.root }}/fig/extrasMAGs/16.rRbiMs-3.png">
-    <img src="{{ page.root }}/fig/extrasMAGs/16.rRbiMs-3.png" alt="RbiMs"/>
+  <a href="fig/extrasMAGs/16.rRbiMs-3.png">
+    <img src="fig/extrasMAGs/16.rRbiMs-3.png" alt="RbiMs"/>
   </a>
 </p>
 <br>
 
 Vamos al editor de Rstudio para correr RbiMs ✨
 
-``` r
+```r
 library(tidyverse)
 library(tidyr)
 library(rbims)
@@ -309,7 +335,7 @@ plot_bubble(tibble_ko = Aminoacids_metabolism_pozol,
             x_labs = FALSE) 
 
 # Exploración de una Vía Específica
-# podemos explorar una sola vía, como el “Secretion system,” y crear un mapa de calor para visualizar los genes relacionados con esta vía:
+# podemos explorar una sola vía, como el "Secretion system," y crear un mapa de calor para visualizar los genes relacionados con esta vía:
 
 Secretion_system_pozol <- pozol_mapp %>%
   drop_na(Cycle) %>%
@@ -347,24 +373,27 @@ unique(pozol_mapp$Cycle)
 
 <br>
 <p style="text-align: center;">
-  <a href="{{ page.root }}/fig/extrasMAGs/17.RBiMs_heatmap.png">
-    <img src="{{ page.root }}/fig/extrasMAGs/17.RBiMs_heatmap.png" alt="RbiMs"/>
+  <a href="fig/extrasMAGs/17.RBiMs_heatmap.png">
+    <img src="fig/extrasMAGs/17.RBiMs_heatmap.png" alt="RbiMs"/>
   </a>
 </p>
 <br>
 
-> ## Ejercicio 4
-> 
-> 
-> * Reúnanse en equipos y exploren la tabla de mapeo de RbiMs
-> * Seleccionen alguna via y obtenga un plot con lo que quieran incluir.
-> * En la [carpeta compartida de Drive](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) busquen la diapositiva para el Ejercicio 4.
-> * En la diapositiva correspondiente resuman sus resultados obtenidos.
-> 
-> Tiempo de actividad (15 min)
-> 
-> Tiempo de presentación de resultados (2 min por equipo)
-{: .challenge}
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Ejercicio 4
+
+- Reúnanse en equipos y exploren la tabla de mapeo de RbiMs
+- Seleccionen alguna via y obtenga un plot con lo que quieran incluir.
+- En la [carpeta compartida de Drive](https://docs.google.com/presentation/d/1IRqCKRA-5kS2NxkNQdTumLO-ZrD8KiTHXF92QJ4Bb_s/edit?usp=sharing) busquen la diapositiva para el Ejercicio 4.
+- En la diapositiva correspondiente resuman sus resultados obtenidos.
+
+Tiempo de actividad (15 min)
+
+Tiempo de presentación de resultados (2 min por equipo)
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 <br>
 
@@ -373,3 +402,5 @@ unique(pozol_mapp$Cycle)
 Adicionalmente podrías anotar el metabolismo secundario de los *bins* siguiendo el flujo de análisis propuestos en la lección de [Minería Genómica](https://carpentries-incubator.github.io/genome-mining/02-antismash/index.html) de Software Carpentry.
 
 <br>
+
+

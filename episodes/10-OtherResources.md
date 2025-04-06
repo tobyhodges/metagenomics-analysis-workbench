@@ -1,101 +1,125 @@
 ---
-title: "Other Resources"
+title: Other Resources
 teaching: 5
 exercises: 10
-questions:
-- "Where are other metagenomic resources?"
-objectives:
-- "Know some places where to find more information."
-keypoints:
-- "Enjoy metagenomics."
 ---
 
-## Other resources 
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Know some places where to find more information.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- Where are other metagenomic resources?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Other resources
+
 ### Cuatro Ciénegas
-More information about 4 Ciénegas is available in these podcasts 
-[Mexican oasis in the desert](https://www.sciencemag.org/podcast/oasis-biodiversity-mexican-desert-and-making-sound-heat) 
-and [Mexican Oasis]( https://youtu.be/xMMm_GKZsnU), in this 
-[Cuatro Ciénegas Video](https://www.youtube.com/embed/VzImXRI9wYE?autoplay=1&rel=0), 
-and finally, the manuscript 
+
+More information about 4 Ciénegas is available in these podcasts
+[Mexican oasis in the desert](https://www.sciencemag.org/podcast/oasis-biodiversity-mexican-desert-and-making-sound-heat)
+and [Mexican Oasis](https://youtu.be/xMMm_GKZsnU), in this
+[Cuatro Ciénegas Video](https://www.youtube.com/embed/VzImXRI9wYE?autoplay=1&rel=0),
+and finally, the manuscript
 [Cuatro Ciénegas](https://www.sciencemag.org/news/2020/06/pools-mexican-desert-are-window-earth-s-early-life).
 
-### Other tutorials and books  
-Now that you finished this metagenomic lesson, you are ready 
-to explore on your own the universe of available tutorials. 
+### Other tutorials and books
+
+Now that you finished this metagenomic lesson, you are ready
+to explore on your own the universe of available tutorials.
 [Phyloseq tutorial](https://joey711.github.io/phyloseq/) contains much more examples of metagenomic data manipulation.  
-The [Computational Genomics tutorial](https://genomics.sschmeier.com/) 
-by Schmeier explains each step of the process carefully. There is a beautiful entry called [History of metagenomics] in the Meren Lab blog (http://merenlab.org/2020/07/27/history-of-metagenomics/) 
-as well as several videos explaining 
-[Metapangenomics: A nexus between pangenomes and metagenomes](https://youtu.be/C3fHlccFxJw), 
+The [Computational Genomics tutorial](https://genomics.sschmeier.com/)
+by Schmeier explains each step of the process carefully. There is a beautiful entry called [History of metagenomics] in the Meren Lab blog ([http://merenlab.org/2020/07/27/history-of-metagenomics/](https://merenlab.org/2020/07/27/history-of-metagenomics/))
+as well as several videos explaining
+[Metapangenomics: A nexus between pangenomes and metagenomes](https://youtu.be/C3fHlccFxJw),
 [The power of metagenomic read recruitment](https://youtu.be/MqD4aN1p1qA),
-[Genome-resolved metagenomics: key concepts in reconstructing genomes from metagenomes](https://youtu.be/RjNdHGK4ruo). 
-Finally, for Spanish speakers, the ISME course is a detailed tutorial 
-for 16s metabarcoding 
-[ISME Análisis de diversidad](http://www.castrolab.org/isme/biodiversity/biodiversity.html).   
+[Genome-resolved metagenomics: key concepts in reconstructing genomes from metagenomes](https://youtu.be/RjNdHGK4ruo).
+Finally, for Spanish speakers, the ISME course is a detailed tutorial
+for 16s metabarcoding
+[ISME Análisis de diversidad](https://www.castrolab.org/isme/biodiversity/biodiversity.html).
 
-The book [Microbiomes](https://link.springer.com/book/10.1007/978-3-030-65317-0) shares a contemporary concept of microbiomes. Books 
-[Statistical analysis of microbiome data](https://link.springer.com/book/10.1007/978-3-030-73351-3) 
-and [statistical analysis of microbiome data with r](https://link.springer.com/book/10.1007/978-981-13-1534-3) 
-contain a state-of-the-art compendium of the statistical and computational 
-microbiome analysis techniques beyond diversity analysis.    
+The book [Microbiomes](https://link.springer.com/book/10.1007/978-3-030-65317-0) shares a contemporary concept of microbiomes. Books
+[Statistical analysis of microbiome data](https://link.springer.com/book/10.1007/978-3-030-73351-3)
+and [statistical analysis of microbiome data with r](https://link.springer.com/book/10.1007/978-981-13-1534-3)
+contain a state-of-the-art compendium of the statistical and computational
+microbiome analysis techniques beyond diversity analysis.
 
-### Other studies and databases    
-Some databases are [jgi](https://img.jgi.doe.gov/), 
-[The Earth microbiome project](https://earthmicrobiome.org/), 
-[metaSUB](http://metasub.org/), 
-[The atlas of soil microbiome](https://www.science.org/doi/10.1126/science.aap9516), 
-and [The Human microbiome project](https://hmpdacc.org/).  
+### Other studies and databases
+
+Some databases are [jgi](https://img.jgi.doe.gov/),
+[The Earth microbiome project](https://earthmicrobiome.org/),
+[metaSUB](https://metasub.org/),
+[The atlas of soil microbiome](https://www.science.org/doi/10.1126/science.aap9516),
+and [The Human microbiome project](https://hmpdacc.org/).
 
 ### MG-RAST
 
-A valuable and easy-to-use resource is [MG-RAST](https://www.mg-rast.org/), which is 
+A valuable and easy-to-use resource is [MG-RAST](https://www.mg-rast.org/), which is
 at the same time a database and an online analysis tool. MG-RAST is
-an online metagenomic platform where you can upload your raw data with its 
-corresponding metadata and get a complete taxonomic analysis of it. MG-RAST is 
-a great place to get started in this type of analysis, and it is also an extensive 
-repository of available data for future experiments. On the downside, it 
-is not possible to modify significantly the steps and parameters in the MG-RAST 
-workflow, so there is little room when it comes to implementing our preferred 
+an online metagenomic platform where you can upload your raw data with its
+corresponding metadata and get a complete taxonomic analysis of it. MG-RAST is
+a great place to get started in this type of analysis, and it is also an extensive
+repository of available data for future experiments. On the downside, it
+is not possible to modify significantly the steps and parameters in the MG-RAST
+workflow, so there is little room when it comes to implementing our preferred
 analysis tools when using MG-RAST.
 
-The Cuatro Ciénegas data that we used in the workshop is already in MG-RAST! 
-You can check it out [here](https://www.mg-rast.org/mgmain.html?mgpage=project&project=mgp96823). 
+The Cuatro Ciénegas data that we used in the workshop is already in MG-RAST!
+You can check it out [here](https://www.mg-rast.org/mgmain.html?mgpage=project&project=mgp96823).
 
 We can check the taxonomical distribution of our sample at different taxonomical levels.
 
 The most abundant phylum is Proteobacteria.  
 <a href="../fig/03-11-02.png">
-  <img src="../fig/03-11-02.png" alt="Pie chart showing the relative abundance at the phylum level, and the legend with the phylum names, read count, and percentages." />
+<img src="../fig/03-11-02.png" alt="Pie chart showing the relative abundance at the phylum level, and the legend with the phylum names, read count, and percentages." />
 </a>
 
-Since we have a shotgun metagenome, we can also investigate the metabolic functions 
-present in our sample. MG-RAST can find genes and annotate their function through the implementation of RAST or Rapid Annotation using Subsystems Technology. 
+Since we have a shotgun metagenome, we can also investigate the metabolic functions
+present in our sample. MG-RAST can find genes and annotate their function through the implementation of RAST or Rapid Annotation using Subsystems Technology.
 By looking at the charts generated by this analysis, we see that most of the genes
-are dedicated to metabolism.  
+are dedicated to metabolism.
 
-<a href="../fig/03-11-04.png">
-  <img src="../fig/03-11-04.png" alt="Pie chart showing the relative abundance of general functional categories, and the legend with the category names, read count, and percentages." />
+<a href="fig/03-11-04.png">
+  <img src="fig/03-11-04.png" alt="Pie chart showing the relative abundance of general functional categories, and the legend with the category names, read count, and percentages." />
 </a>
 
-<a href="../fig/03-11-05.png">
-  <img src="../fig/03-11-05.png" alt="Pie chart showing the relative abundance of specific functional categories, and the legend with the category names, read count, and percentages." />
+<a href="fig/03-11-05.png">
+  <img src="fig/03-11-05.png" alt="Pie chart showing the relative abundance of specific functional categories, and the legend with the category names, read count, and percentages." />
 </a>
 
 MG-RAST has its own specific pipeline, so it is a handy tool to have a quick look at your data and also to store and share it! However, it does not keep you from making your own personalized analysis like we just learned!
 
 <!-- [Evomics](http://evomics.org/learning/genomics/), [Data Carpentry in 16S Metagenomics](https://datacarpentry.org/blog/2017/11/16s-dc)  -->
 
-> ## Discussion: Exploring more resources
->
-> Explore one of the suggested resources and discuss your findings with a neighbor.
-{: .discussion}
+::::::::::::::::::::::::::::::::::::::  discussion
 
+## Discussion: Exploring more resources
+
+Explore one of the suggested resources and discuss your findings with a neighbor.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Carpentries Philosophy
-A good lesson should be as complete and transparent that becomes easy to teach by any instructor. 
-Carpentries lessons are developed for the community, and now you are part of us. 
-This lesson is being developed, and we are sure that you can collaborate and help us improve it.  
+
+A good lesson should be as complete and transparent that becomes easy to teach by any instructor.
+Carpentries lessons are developed for the community, and now you are part of us.
+This lesson is being developed, and we are sure that you can collaborate and help us improve it.
+
 <!--## How do our results compare with the original research-->  
+
 <!-- ## How can we improve the data analysis!--->  
-                             
-{% include links.md %}
+
+
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- Enjoy metagenomics.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
